@@ -7,45 +7,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Login Modal -->
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Login to Your Account</h2>
-            <form id="loginForm">
-                <input type="email" id="email" placeholder="Email" required>
-                <input type="password" id="password" placeholder="Password" required>
-                <button type="submit" class="btn-primary">Login</button>
-            </form>
-            <p class="modal-footer">Don't have an account? <a href="#" onclick="toggleSignup()">Sign up here</a></p>
-        </div>
-    </div>
-
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <h1 class="nav-logo">RazorBuild</h1>
-                <div class="nav-right">
-                    <button id="loginBtn" class="btn-login">Login</button>
-                    <div class="cart-container">
-                        <button id="cartBtn" class="btn-cart">
-                            🛒 Cart
-                            <span id="cartCount" class="cart-count">0</span>
-                        </button>
-                        <div id="cartDropdown" class="cart-dropdown">
-                            <div id="cartItems" class="cart-items"></div>
-                            <div class="cart-total">
-                                <strong>Total: $<span id="cartTotal">0.00</span></strong>
-                            </div>
-                            <button id="checkoutBtn" class="btn-checkout">Checkout</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-
     <header>
         <div class="container">
             <h1>RazorBuild</h1>
@@ -57,139 +18,103 @@
         <div class="container">
             <div class="products-grid">
                 <!-- Product 1 -->
-                <div class="product-card" data-product-id="1" data-product-name="Frame" data-product-price="592.26" data-product-link="https://www.amazon.com/Razor-Rocket-McGrath-Electric-Motocross/dp/B083G8KNZ5">
+                <a href="https://www.amazon.com/Razor-Rocket-McGrath-Electric-Motocross/dp/B083G8KNZ5" class="product-card" target="_blank">
                     <div class="product-image">
                         <img src="https://i.imgur.com/W1973wQ.png" alt="Product 1">
                     </div>
                     <div class="product-info">
                         <h3>Frame</h3>
                         <p class="price">$592.26</p>
-                        <div class="product-actions">
-                            <a href="https://www.amazon.com/Razor-Rocket-McGrath-Electric-Motocross/dp/B083G8KNZ5" target="_blank" class="btn-view">View Product</a>
-                            <button class="btn-add-cart" onclick="addToCart(event)">Add to Cart</button>
-                        </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Product 2 -->
-                <div class="product-card" data-product-id="2" data-product-name="Motor" data-product-price="189.00" data-product-link="https://electroandcompany.com/collections/sx500/products/ec4p-lite-brushless-motor">
+                <a href="https://electroandcompany.com/collections/sx500/products/ec4p-lite-brushless-motor" class="product-card" target="_blank">
                     <div class="product-image">
                         <img src="https://i.imgur.com/o3aRbkZ.png" alt="Product 2">
                     </div>
                     <div class="product-info">
                         <h3>Motor</h3>
                         <p class="price">$189.00</p>
-                        <div class="product-actions">
-                            <a href="https://electroandcompany.com/collections/sx500/products/ec4p-lite-brushless-motor" target="_blank" class="btn-view">View Product</a>
-                            <button class="btn-add-cart" onclick="addToCart(event)">Add to Cart</button>
-                        </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Product 3 -->
-                <div class="product-card" data-product-id="3" data-product-name="BarClamps" data-product-price="13.99" data-product-link="https://www.amazon.com/USTPO-Motorcycle-Handlebar-Risers-Universal/dp/B0DMF4HXVM">
+                <a href="https://www.amazon.com/USTPO-Motorcycle-Handlebar-Risers-Universal/dp/B0DMF4HXVM" class="product-card" target="_blank">
                     <div class="product-image">
                         <img src="https://i.imgur.com/OtnARf8.png" alt="Product 3">
                     </div>
                     <div class="product-info">
                         <h3>BarClamps</h3>
                         <p class="price">$13.99</p>
-                        <div class="product-actions">
-                            <a href="https://www.amazon.com/USTPO-Motorcycle-Handlebar-Risers-Universal/dp/B0DMF4HXVM" target="_blank" class="btn-view">View Product</a>
-                            <button class="btn-add-cart" onclick="addToCart(event)">Add to Cart</button>
-                        </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Product 4 -->
-                <div class="product-card" data-product-id="4" data-product-name="HandleBars" data-product-price="34.99" data-product-link="https://www.amazon.com/DJ-Motor-Aluminum-Handlebar-Handle-2019-2024/dp/B0CWL793GM">
+                <a href="https://www.amazon.com/DJ-Motor-Aluminum-Handlebar-Handle-2019-2024/dp/B0CWL793GM" class="product-card" target="_blank">
                     <div class="product-image">
                         <img src="https://i.imgur.com/Y6Y6LNw.png" alt="Product 4">
                     </div>
                     <div class="product-info">
                         <h3>HandleBars</h3>
                         <p class="price">$34.99</p>
-                        <div class="product-actions">
-                            <a href="https://www.amazon.com/DJ-Motor-Aluminum-Handlebar-Handle-2019-2024/dp/B0CWL793GM" target="_blank" class="btn-view">View Product</a>
-                            <button class="btn-add-cart" onclick="addToCart(event)">Add to Cart</button>
-                        </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Product 5 -->
-                <div class="product-card" data-product-id="5" data-product-name="Forks" data-product-price="189.99" data-product-link="https://www.midwestminimods.com/products/580mm-fork-kit">
+                <a href="https://www.midwestminimods.com/products/580mm-fork-kit" class="product-card" target="_blank">
                     <div class="product-image">
                         <img src="https://i.imgur.com/yNZl24C.png" alt="Product 5">
                     </div>
                     <div class="product-info">
                         <h3>Forks</h3>
                         <p class="price">$189.99</p>
-                        <div class="product-actions">
-                            <a href="https://www.midwestminimods.com/products/580mm-fork-kit" target="_blank" class="btn-view">View Product</a>
-                            <button class="btn-add-cart" onclick="addToCart(event)">Add to Cart</button>
-                        </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Product 6 -->
-                <div class="product-card" data-product-id="6" data-product-name="Wheels" data-product-price="219.99" data-product-link="https://www.midwestminimods.com/products/10-inch-street-wheel-spoke-set">
+                <a href="https://www.midwestminimods.com/products/10-inch-street-wheel-spoke-set" class="product-card" target="_blank">
                     <div class="product-image">
                         <img src="https://i.imgur.com/WqZNh4z.png" alt="Product 6">
                     </div>
                     <div class="product-info">
                         <h3>Wheels</h3>
                         <p class="price">$219.99</p>
-                        <div class="product-actions">
-                            <a href="https://www.midwestminimods.com/products/10-inch-street-wheel-spoke-set" target="_blank" class="btn-view">View Product</a>
-                            <button class="btn-add-cart" onclick="addToCart(event)">Add to Cart</button>
-                        </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Product 7 -->
-                <div class="product-card" data-product-id="7" data-product-name="Brakes" data-product-price="109.99" data-product-link="https://www.midwestminimods.com/products/mini-mods-pit-bike-brake-kit">
+                <a href="https://www.midwestminimods.com/products/mini-mods-pit-bike-brake-kit" class="product-card" target="_blank">
                     <div class="product-image">
                         <img src="https://i.imgur.com/gazLDev.png" alt="Product 7">
                     </div>
                     <div class="product-info">
                         <h3>Brakes</h3>
                         <p class="price">$109.99</p>
-                        <div class="product-actions">
-                            <a href="https://www.midwestminimods.com/products/mini-mods-pit-bike-brake-kit" target="_blank" class="btn-view">View Product</a>
-                            <button class="btn-add-cart" onclick="addToCart(event)">Add to Cart</button>
-                        </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Product 8 -->
-                <div class="product-card" data-product-id="8" data-product-name="Controller" data-product-price="169.00" data-product-link="https://www.hotpaxx.com/product-page/fardriver-nd72450-200a-line-450a-phase">
+                <a href="https://www.hotpaxx.com/product-page/fardriver-nd72450-200a-line-450a-phase" class="product-card" target="_blank">
                     <div class="product-image">
                         <img src="https://i.imgur.com/t9nCL6m.png" alt="Product 8">
                     </div>
                     <div class="product-info">
                         <h3>Controller</h3>
                         <p class="price">$169.00</p>
-                        <div class="product-actions">
-                            <a href="https://www.hotpaxx.com/product-page/fardriver-nd72450-200a-line-450a-phase" target="_blank" class="btn-view">View Product</a>
-                            <button class="btn-add-cart" onclick="addToCart(event)">Add to Cart</button>
-                        </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Product 9 -->
-                <div class="product-card" data-product-id="9" data-product-name="Battery" data-product-price="619.00" data-product-link="https://www.hotpaxx.com/product-page/72v-24ah-150a-bomb-moto-battery">
+                <a href="https://www.hotpaxx.com/product-page/72v-24ah-150a-bomb-moto-battery" class="product-card" target="_blank">
                     <div class="product-image">
                         <img src="https://i.imgur.com/QsK7ynZ.png" alt="Product 9">
                     </div>
                     <div class="product-info">
                         <h3>Battery</h3>
                         <p class="price">$619.00</p>
-                        <div class="product-actions">
-                            <a href="https://www.hotpaxx.com/product-page/72v-24ah-150a-bomb-moto-battery" target="_blank" class="btn-view">View Product</a>
-                            <button class="btn-add-cart" onclick="addToCart(event)">Add to Cart</button>
-                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </main>
@@ -199,195 +124,5 @@
             <p>&copy; 2025 RazorXmasBuild. Made By Rafe.</p>
         </div>
     </footer>
-
-    <script>
-        // Cart management
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        let loggedIn = localStorage.getItem('loggedIn') === 'true';
-
-        // Initialize UI
-        updateCartUI();
-        updateLoginStatus();
-
-        // Modal functionality
-        const modal = document.getElementById('loginModal');
-        const loginBtn = document.getElementById('loginBtn');
-        const closeBtn = document.querySelector('.close');
-        const loginForm = document.getElementById('loginForm');
-        const cartBtn = document.getElementById('cartBtn');
-        const cartDropdown = document.getElementById('cartDropdown');
-
-        loginBtn.addEventListener('click', () => {
-            if (loggedIn) {
-                loggedIn = false;
-                localStorage.setItem('loggedIn', 'false');
-                updateLoginStatus();
-            } else {
-                modal.style.display = 'block';
-            }
-        });
-
-        closeBtn.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
-
-        window.addEventListener('click', (event) => {
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-
-        loginForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            
-            if (email && password.length >= 6) {
-                loggedIn = true;
-                localStorage.setItem('loggedIn', 'true');
-                localStorage.setItem('userEmail', email);
-                modal.style.display = 'none';
-                updateLoginStatus();
-                loginForm.reset();
-                alert('✅ Login successful! Welcome to RazorBuild 🚀');
-            } else {
-                alert('⚠️ Please enter a valid email and password (min 6 characters)');
-            }
-        });
-
-        // Cart dropdown toggle
-        cartBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            cartDropdown.style.display = cartDropdown.style.display === 'block' ? 'none' : 'block';
-        });
-
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.cart-container')) {
-                cartDropdown.style.display = 'none';
-            }
-        });
-
-        // Add to cart function
-        function addToCart(event) {
-            event.stopPropagation();
-            const card = event.target.closest('.product-card');
-            const productId = card.dataset.productId;
-            const productName = card.dataset.productName;
-            const productPrice = parseFloat(card.dataset.productPrice);
-
-            const existingItem = cart.find(item => item.id === productId);
-            if (existingItem) {
-                existingItem.quantity += 1;
-            } else {
-                cart.push({
-                    id: productId,
-                    name: productName,
-                    price: productPrice,
-                    quantity: 1
-                });
-            }
-
-            localStorage.setItem('cart', JSON.stringify(cart));
-            updateCartUI();
-            
-            // Visual feedback
-            event.target.textContent = '✅ Added!';
-            setTimeout(() => {
-                event.target.textContent = 'Add to Cart';
-            }, 1500);
-        }
-
-        // Update cart UI
-        function updateCartUI() {
-            const cartCount = document.getElementById('cartCount');
-            const cartItems = document.getElementById('cartItems');
-            const cartTotal = document.getElementById('cartTotal');
-
-            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-            cartCount.textContent = totalItems;
-
-            cartItems.innerHTML = '';
-            let total = 0;
-
-            if (cart.length === 0) {
-                cartItems.innerHTML = '<p style="padding: 20px; text-align: center; color: #888;">Your cart is empty</p>';
-            } else {
-                cart.forEach(item => {
-                    const itemTotal = item.price * item.quantity;
-                    total += itemTotal;
-                    const cartItem = document.createElement('div');
-                    cartItem.className = 'cart-item';
-                    cartItem.innerHTML = `
-                        <div class="cart-item-info">
-                            <h4>${item.name}</h4>
-                            <p>$${item.price.toFixed(2)} x ${item.quantity}</p>
-                        </div>
-                        <div class="cart-item-actions">
-                            <button onclick="updateQuantity('${item.id}', -1)">−</button>
-                            <button onclick="removeFromCart('${item.id}')">🗑️</button>
-                            <button onclick="updateQuantity('${item.id}', 1)">+</button>
-                        </div>
-                    `;
-                    cartItems.appendChild(cartItem);
-                });
-            }
-
-            cartTotal.textContent = total.toFixed(2);
-        }
-
-        // Update quantity
-        function updateQuantity(productId, change) {
-            const item = cart.find(item => item.id === productId);
-            if (item) {
-                item.quantity += change;
-                if (item.quantity <= 0) {
-                    removeFromCart(productId);
-                } else {
-                    localStorage.setItem('cart', JSON.stringify(cart));
-                    updateCartUI();
-                }
-            }
-        }
-
-        // Remove from cart
-        function removeFromCart(productId) {
-            cart = cart.filter(item => item.id !== productId);
-            localStorage.setItem('cart', JSON.stringify(cart));
-            updateCartUI();
-        }
-
-        // Update login status
-        function updateLoginStatus() {
-            if (loggedIn) {
-                loginBtn.textContent = '👤 Logout';
-                loginBtn.style.background = '#ff6b6b';
-            } else {
-                loginBtn.textContent = '🔐 Login';
-                loginBtn.style.background = '#667eea';
-            }
-        }
-
-        // Checkout
-        document.getElementById('checkoutBtn').addEventListener('click', () => {
-            if (!loggedIn) {
-                alert('⚠️ Please login first to checkout!');
-                modal.style.display = 'block';
-                return;
-            }
-
-            if (cart.length === 0) {
-                alert('⚠️ Your cart is empty!');
-                return;
-            }
-
-            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-            alert(`✅ Order placed successfully!\n\nItems: ${cart.length} product(s)\nTotal: $${total.toFixed(2)}\n\nThank you for your purchase! 🚀`);
-            
-            cart = [];
-            localStorage.setItem('cart', JSON.stringify(cart));
-            updateCartUI();
-            cartDropdown.style.display = 'none';
-        });
-    </script>
 </body>
 </html>
